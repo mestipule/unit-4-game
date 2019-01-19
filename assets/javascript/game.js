@@ -15,11 +15,17 @@ $(function(){
             counter += valueOption;
          if (counter === targetNumber){
             alert("You Win! " + counter);
-            confirm("Do you want to play again? ");
+            var wantToPlayAgainWhenWin =  confirm("Do you want to play again? ");
+            if (wantToPlayAgainWhenWin){
+                restart();
+            }
             }
             else if(counter >=targetNumber){
-                alert("You Lose! " + counter)
-                confirm("Do you want to play again? ");
+                alert("You Lose! " + counter);
+                var wantToPlayAgainWhenLose = confirm("Do you want to play again? ");
+                if (wantToPlayAgainWhenLose){
+                    restart();
+                }
             }
          });
      }); 
@@ -27,9 +33,10 @@ $(function(){
 $("#number-to-guess").text("Number to Guess:" + targetNumber);
 
 function restart(){
+    counter = 0;
     targetNumber = Math.ceil(Math.random()*101) +19;
     var numberToBeat = document.getElementById("number-to-beat");
-    $(numberToBeat).append("Number To Beat: " + targetNumber);
+    $(numberToBeat).text("Number To Beat: " + targetNumber);
 };
 
 // $("#image-crystals").on("click", function(){
