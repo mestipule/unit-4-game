@@ -1,5 +1,6 @@
-var counter, valueOfCrystals, targetNumber, crystal, incorrectGuesses;
+var counter, valueOfCrystals, targetNumber, crystal, incorrectGuesses, addingNumber;
 counter = 0;
+
 //score = Math.ceil(Math.random()*12);
 targetNumber = Math.ceil(Math.random()*101) +19;
 $(function(){
@@ -13,6 +14,7 @@ $(function(){
         $(this).attr("data-crystalValue", valueOption);
         $(this).on("click", function(){
             counter += valueOption;
+            $("#remaining-guesses").text("Your current number: " + counter);
          if (counter === targetNumber){
             alert("You Win! " + counter);
             var wantToPlayAgainWhenWin =  confirm("Do you want to play again? ");

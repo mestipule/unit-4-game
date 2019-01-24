@@ -17,10 +17,21 @@ text-align: center;
 #number-to-beat{
     font-size: 25;
     width: 11%;
-    margin-left: 43%;
+    margin-left: 24%;
     border: 4px solid rgb(24, 114, 167);
     padding: 10px;
+    display: inline-block;
 }
+
+#remaining-guesses{
+    font-size: 25;
+    width: 11%;
+    margin-left: 24%;
+    border: 4px solid rgb(24, 114, 167);
+    padding: 10px;
+    display: inline-block;
+}
+
 .instruction{
     margin-left: 10%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
