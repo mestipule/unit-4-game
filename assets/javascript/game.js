@@ -15,6 +15,7 @@ $(function(){
         $(this).on("click", function(){
             counter += valueOption;
             $("#remaining-guesses").text("Your current number: " + counter);
+
          if (counter === targetNumber){
             alert("You Win! " + counter);
             var wantToPlayAgainWhenWin =  confirm("Do you want to play again? ");
@@ -36,6 +37,7 @@ $("#number-to-guess").text("Number to Guess:" + targetNumber);
 
 function restart(){
     counter = 0;
+    $("#remaining-guesses").text("Your current number: ");
     targetNumber = Math.ceil(Math.random()*101) +19;
     var numberToBeat = document.getElementById("number-to-beat");
     $(numberToBeat).text("Number To Beat: " + targetNumber);
