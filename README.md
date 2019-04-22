@@ -7,4 +7,6 @@ In this game your gems are given a random value. The value of the gems are hidde
 Good Luck!
 <br>
 <br>
+![Screenshot](/Screenshots/screenshot.png)
+<br>
 https://mestipule.github.io/unit-4-game/
